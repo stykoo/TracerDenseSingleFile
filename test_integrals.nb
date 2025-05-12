@@ -1,0 +1,517 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     18543,        509]
+NotebookOptionsPosition[     17179,        477]
+NotebookOutlinePosition[     17601,        494]
+CellTagsIndexPosition[     17558,        491]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Get", "[", 
+  RowBox[{
+   RowBox[{"NotebookDirectory", "[", "]"}], "<>", " ", 
+   "\"\<defs_and_integrals.m\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.95604981703689*^9, 3.956049834012891*^9}, 
+   3.956049923664727*^9},
+ CellLabel->"In[78]:=",ExpressionUUID->"0d72a0dd-2ee9-4e65-ac2f-2594fd48c0ba"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"checkIntegral", "[", 
+   RowBox[{"expr_", ",", "vars_", ",", "z_", ",", 
+    RowBox[{"eps_", ":", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "8"}]]}]}], "]"}], ":=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"expr", " ", "/.", " ", "vars"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], "]"}], 
+    "-", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"integrate", "[", 
+       RowBox[{"expr", ",", " ", "z"}], "]"}], "/.", " ", "vars"}], ")"}]}], 
+   "<", "eps"}]}]], "Input",
+ CellChangeTimes->{{3.9560498565582247`*^9, 3.956049880044867*^9}, {
+   3.956049916222604*^9, 3.9560499213611393`*^9}, 3.9560499651879396`*^9, {
+   3.956050092993355*^9, 3.956050098545765*^9}, {3.956050176227051*^9, 
+   3.956050186003017*^9}},
+ CellLabel->"In[89]:=",ExpressionUUID->"54e19111-e824-4198-bafa-2291d70c6541"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"\[Beta]", ">", "0"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{"Exp", "[", 
+        RowBox[{
+         RowBox[{"-", "\[Alpha]"}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"z", "-", "x"}], ")"}], "2"]}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\[Alpha]", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"x", "\[Rule]", " ", "0.9"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Exp", "[", 
+         RowBox[{
+          RowBox[{"-", "\[Alpha]"}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"z", "-", "x"}], ")"}], "2"]}], "]"}], 
+        RowBox[{"Erf", "[", 
+         RowBox[{"\[Beta]", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\[Alpha]", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"x", "\[Rule]", " ", "0.9"}], ",", " ", 
+         RowBox[{"\[Beta]", "\[Rule]", " ", "0.4"}]}], "}"}], ",", " ", "z"}],
+       "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Exp", "[", 
+         RowBox[{
+          RowBox[{"-", "\[Alpha]"}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"z", "-", "x"}], ")"}], "2"]}], "]"}], 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"\[Beta]", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\[Alpha]", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"x", "\[Rule]", " ", "0.9"}], ",", " ", 
+         RowBox[{"\[Beta]", "\[Rule]", " ", "0.4"}]}], "}"}], ",", " ", "z"}],
+       "]"}]}], "}"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[90]:=",ExpressionUUID->"c28cb53e-1f1e-49a2-a542-327b92df84bb"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"True", ",", "True", ",", "True"}], "}"}]], "Output",
+ CellChangeTimes->{3.95604998149792*^9, 3.956050100465686*^9, 
+  3.956050187985581*^9},
+ CellLabel->"Out[90]=",ExpressionUUID->"4493f4be-1d35-4aa3-bef7-b05349eea78d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a", ">", "0"}], ",", " ", 
+     RowBox[{"b", ">", "0"}], ",", 
+     RowBox[{"c", ">", "0"}], ",", 
+     RowBox[{"d", ">", "0"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{"Erfc", "[", 
+        RowBox[{"a", " ", "z"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"a", "\[Rule]", " ", "0.3"}], "}"}], ",", " ", "z"}], "]"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Erfc", "[", 
+         RowBox[{"a", " ", "z"}], "]"}], " ", 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"b", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.45"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"Erfc", "[", 
+         RowBox[{"a", " ", "z"}], "]"}], "2"], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"a", "\[Rule]", " ", "0.3"}], "}"}], ",", " ", "z"}], "]"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Erfc", "[", 
+         RowBox[{"a", " ", "z"}], "]"}], " ", 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"b", " ", "z"}], "]"}], " ", 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"c", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.45"}], ",", 
+         RowBox[{"c", "\[Rule]", " ", "1.2"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"Erfc", "[", 
+         RowBox[{"a", " ", "z"}], "]"}], "3"], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"a", "\[Rule]", " ", "0.3"}], "}"}], ",", " ", "z"}], "]"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"Erfc", "[", 
+          RowBox[{"a", " ", "z"}], "]"}], "2"], " ", 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"b", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.45"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Erfc", "[", 
+         RowBox[{"a", " ", "z"}], "]"}], " ", 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"b", " ", "z"}], "]"}], " ", 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"c", " ", "z"}], "]"}], 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"d", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.45"}], ",", 
+         RowBox[{"c", "\[Rule]", " ", "1.2"}], ",", " ", 
+         RowBox[{"d", "\[Rule]", " ", "0.2"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"Erfc", "[", 
+         RowBox[{"a", " ", "z"}], "]"}], "4"], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"a", "\[Rule]", " ", "0.3"}], "}"}], ",", " ", "z"}], "]"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"Erfc", "[", 
+          RowBox[{"a", " ", "z"}], "]"}], "2"], " ", 
+        SuperscriptBox[
+         RowBox[{"Erfc", "[", 
+          RowBox[{"b", " ", "z"}], "]"}], "2"]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.45"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"Erfc", "[", 
+          RowBox[{"a", " ", "z"}], "]"}], "3"], " ", 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"b", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.45"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"Erfc", "[", 
+          RowBox[{"a", " ", "z"}], "]"}], "2"], " ", 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"b", " ", "z"}], "]"}], " ", 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"c", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.45"}], ",", 
+         RowBox[{"c", "\[Rule]", " ", "1.2"}], ",", " ", 
+         RowBox[{"d", "\[Rule]", " ", "0.2"}]}], "}"}], ",", " ", "z"}], 
+      "]"}]}], "}"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[91]:=",ExpressionUUID->"97ce8c9e-2ace-407e-a5d0-ba8060ce80c2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "True", ",", "True", ",", "True", ",", "True", ",", "True", ",", "True", 
+   ",", "True", ",", "True", ",", "True", ",", "True", ",", "True"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.956049993855579*^9, 3.956050106851821*^9, 
+  3.9560501888763313`*^9},
+ CellLabel->"Out[91]=",ExpressionUUID->"a0dc1734-0e8b-4696-910b-d1bb031ab13a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p", ">", "0"}], ",", " ", 
+     RowBox[{"q", ">", "0"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{"OwenT", "[", 
+        RowBox[{
+         RowBox[{"a", " ", "z"}], ",", " ", "b"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"OwenT", "[", 
+         RowBox[{
+          RowBox[{"a", " ", "z"}], ",", " ", "b"}], "]"}], "2"], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Exp", "[", 
+         RowBox[{
+          RowBox[{"-", "\[Alpha]"}], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"z", "-", "x"}], ")"}], "2"]}], "]"}], 
+        RowBox[{"OwenT", "[", 
+         RowBox[{
+          RowBox[{"a", " ", "z"}], ",", " ", "b"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}], ",", 
+         RowBox[{"\[Alpha]", "\[Rule]", " ", "0.15"}], ",", " ", 
+         RowBox[{"x", "\[Rule]", " ", "0.9"}], ",", " ", 
+         RowBox[{"OwenS", "\[Rule]", " ", "NOwenS"}]}], "}"}], ",", " ", 
+       "z"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"OwenT", "[", 
+         RowBox[{
+          RowBox[{"a", " ", "z"}], ",", " ", "b"}], "]"}], 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"p", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}], ",", " ", 
+         RowBox[{"p", "\[Rule]", " ", "1.3"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"OwenT", "[", 
+         RowBox[{
+          RowBox[{"a", " ", "z"}], ",", " ", "b"}], "]"}], 
+        RowBox[{"OwenT", "[", 
+         RowBox[{
+          RowBox[{"c", " ", "z"}], ",", " ", "d"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}], ",", " ", 
+         RowBox[{"c", "\[Rule]", " ", "1.3"}], ",", " ", 
+         RowBox[{"d", "\[Rule]", " ", "0.43"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"OwenT", "[", 
+         RowBox[{
+          RowBox[{"a", " ", "z"}], ",", " ", "b"}], "]"}], 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"p", " ", "z"}], "]"}], 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"q", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}], ",", " ", 
+         RowBox[{"p", "\[Rule]", " ", "1.3"}], ",", " ", 
+         RowBox[{"q", "\[Rule]", " ", "0.43"}]}], "}"}], ",", " ", "z"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"OwenT", "[", 
+         RowBox[{
+          RowBox[{"a", " ", "z"}], ",", " ", "b"}], "]"}], 
+        SuperscriptBox[
+         RowBox[{"Erfc", "[", 
+          RowBox[{"p", " ", "z"}], "]"}], "2"]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}], ",", " ", 
+         RowBox[{"p", "\[Rule]", " ", "1.3"}], ",", " ", 
+         RowBox[{"q", "\[Rule]", " ", "0.43"}]}], "}"}], ",", " ", "z"}], 
+      "]"}]}], "}"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[92]:=",ExpressionUUID->"69103bc4-05ea-4e05-bf23-62a20dd5917b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "True", ",", "True", ",", "True", ",", "True", ",", "True", ",", "True", 
+   ",", "True"}], "}"}]], "Output",
+ CellChangeTimes->{3.9560500059709387`*^9, 3.956050108752245*^9, 
+  3.9560501898419228`*^9},
+ CellLabel->"Out[92]=",ExpressionUUID->"c28e5a91-bda4-467f-a67b-3474feb3a85e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a", ">", "0"}], ",", " ", 
+     RowBox[{"\[Beta]", ">", "0"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{"OwenS", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "a"}], " ", "z"}], ",", " ", "b", ",", " ", "c"}], 
+        "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}], ",", " ", 
+         RowBox[{"c", "\[Rule]", " ", "1.2"}], ",", 
+         RowBox[{"OwenS", "\[Rule]", " ", "NOwenS"}]}], "}"}], ",", " ", 
+       "z"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"OwenS", "[", 
+         RowBox[{
+          RowBox[{"a", " ", "z"}], ",", " ", "b", ",", " ", "c"}], "]"}], 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"\[Beta]", " ", "z"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}], ",", " ", 
+         RowBox[{"c", "\[Rule]", " ", "1.2"}], ",", " ", 
+         RowBox[{"\[Beta]", "\[Rule]", " ", "0.24"}], ",", 
+         RowBox[{"OwenS", "\[Rule]", " ", "NOwenS"}]}], "}"}], ",", " ", 
+       "z"}], "]"}], ",", 
+     RowBox[{"checkIntegral", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"OwenS", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "a"}], " ", "z"}], ",", " ", "b", ",", " ", "c"}], 
+         "]"}], 
+        RowBox[{"Erfc", "[", 
+         RowBox[{"\[Beta]", " ", "z"}], "]"}]}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"a", "\[Rule]", " ", "0.3"}], ",", " ", 
+         RowBox[{"b", "\[Rule]", " ", "0.2"}], ",", " ", 
+         RowBox[{"c", "\[Rule]", " ", "1.2"}], ",", " ", 
+         RowBox[{"\[Beta]", "\[Rule]", " ", "0.24"}], ",", 
+         RowBox[{"OwenS", "\[Rule]", " ", "NOwenS"}]}], "}"}], ",", " ", 
+       "z"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.956050201571356*^9, 
+  3.9560502037815332`*^9}},ExpressionUUID->"ee362e04-6799-45dc-a076-\
+7142424ab5ba"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"True", ",", "True", ",", "True"}], "}"}]], "Output",
+ CellChangeTimes->{3.956050018687131*^9, 3.956050113650402*^9, 
+  3.956050194332138*^9},
+ CellLabel->"Out[93]=",ExpressionUUID->"cbe1e111-f8d4-459c-8318-c2e045c95072"]
+}, Open  ]]
+},
+WindowSize->{720, 758.25},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"14.1 pour Linux x86 (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"75639dff-b26c-4251-9511-1c7a3bc95412"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 326, 7, 55, "Input",ExpressionUUID->"0d72a0dd-2ee9-4e65-ac2f-2594fd48c0ba"],
+Cell[883, 29, 939, 24, 81, "Input",ExpressionUUID->"54e19111-e824-4198-bafa-2291d70c6541"],
+Cell[CellGroupData[{
+Cell[1847, 57, 1986, 53, 226, "Input",ExpressionUUID->"c28cb53e-1f1e-49a2-a542-327b92df84bb"],
+Cell[3836, 112, 259, 5, 39, "Output",ExpressionUUID->"4493f4be-1d35-4aa3-bef7-b05349eea78d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4132, 122, 5367, 144, 615, "Input",ExpressionUUID->"97ce8c9e-2ace-407e-a5d0-ba8060ce80c2"],
+Cell[9502, 268, 376, 8, 40, "Output",ExpressionUUID->"a0dc1734-0e8b-4696-910b-d1bb031ab13a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9915, 281, 4335, 113, 539, "Input",ExpressionUUID->"69103bc4-05ea-4e05-bf23-62a20dd5917b"],
+Cell[14253, 396, 323, 7, 40, "Output",ExpressionUUID->"c28e5a91-bda4-467f-a67b-3474feb3a85e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14613, 408, 2287, 59, 292, "Input",ExpressionUUID->"ee362e04-6799-45dc-a076-7142424ab5ba"],
+Cell[16903, 469, 260, 5, 39, "Output",ExpressionUUID->"cbe1e111-f8d4-459c-8318-c2e045c95072"]
+}, Open  ]]
+}
+]
+*)
+
