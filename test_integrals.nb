@@ -10,14 +10,26 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     18543,        509]
-NotebookOptionsPosition[     17179,        477]
-NotebookOutlinePosition[     17601,        494]
-CellTagsIndexPosition[     17558,        491]
+NotebookDataLength[     19174,        526]
+NotebookOptionsPosition[     17592,        490]
+NotebookOutlinePosition[     18015,        507]
+CellTagsIndexPosition[     17972,        504]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell["Test the formulas for the integrals", "Title",
+ CellChangeTimes->{{3.9561307620378447`*^9, 
+  3.956130774112772*^9}},ExpressionUUID->"820ceff9-a9e6-4164-b55f-\
+8b3e4ab54ce3"],
+
+Cell["All calls to checkIntegral should evaluate to True.", "Text",
+ CellChangeTimes->{{3.956130781189831*^9, 
+  3.956130802865395*^9}},ExpressionUUID->"d4b6209f-c6fb-4253-98a3-\
+f9511092e419"],
+
 Cell[BoxData[
  RowBox[{"Get", "[", 
   RowBox[{
@@ -474,9 +486,10 @@ Cell[BoxData[
   3.956050194332138*^9},
  CellLabel->"Out[93]=",ExpressionUUID->"cbe1e111-f8d4-459c-8318-c2e045c95072"]
 }, Open  ]]
+}, Open  ]]
 },
-WindowSize->{720, 758.25},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{1440, 758.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 Magnification:>1.2 Inherited,
 FrontEndVersion->"14.1 pour Linux x86 (64-bit) (July 16, 2024)",
 StyleDefinitions->"Default.nb",
@@ -493,23 +506,27 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 326, 7, 55, "Input",ExpressionUUID->"0d72a0dd-2ee9-4e65-ac2f-2594fd48c0ba"],
-Cell[883, 29, 939, 24, 81, "Input",ExpressionUUID->"54e19111-e824-4198-bafa-2291d70c6541"],
 Cell[CellGroupData[{
-Cell[1847, 57, 1986, 53, 226, "Input",ExpressionUUID->"c28cb53e-1f1e-49a2-a542-327b92df84bb"],
-Cell[3836, 112, 259, 5, 39, "Output",ExpressionUUID->"4493f4be-1d35-4aa3-bef7-b05349eea78d"]
+Cell[576, 22, 180, 3, 115, "Title",ExpressionUUID->"820ceff9-a9e6-4164-b55f-8b3e4ab54ce3"],
+Cell[759, 27, 193, 3, 40, "Text",ExpressionUUID->"d4b6209f-c6fb-4253-98a3-f9511092e419"],
+Cell[955, 32, 326, 7, 55, "Input",ExpressionUUID->"0d72a0dd-2ee9-4e65-ac2f-2594fd48c0ba"],
+Cell[1284, 41, 939, 24, 55, "Input",ExpressionUUID->"54e19111-e824-4198-bafa-2291d70c6541"],
+Cell[CellGroupData[{
+Cell[2248, 69, 1986, 53, 229, "Input",ExpressionUUID->"c28cb53e-1f1e-49a2-a542-327b92df84bb"],
+Cell[4237, 124, 259, 5, 40, "Output",ExpressionUUID->"4493f4be-1d35-4aa3-bef7-b05349eea78d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4132, 122, 5367, 144, 615, "Input",ExpressionUUID->"97ce8c9e-2ace-407e-a5d0-ba8060ce80c2"],
-Cell[9502, 268, 376, 8, 40, "Output",ExpressionUUID->"a0dc1734-0e8b-4696-910b-d1bb031ab13a"]
+Cell[4533, 134, 5367, 144, 532, "Input",ExpressionUUID->"97ce8c9e-2ace-407e-a5d0-ba8060ce80c2"],
+Cell[9903, 280, 376, 8, 40, "Output",ExpressionUUID->"a0dc1734-0e8b-4696-910b-d1bb031ab13a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9915, 281, 4335, 113, 539, "Input",ExpressionUUID->"69103bc4-05ea-4e05-bf23-62a20dd5917b"],
-Cell[14253, 396, 323, 7, 40, "Output",ExpressionUUID->"c28e5a91-bda4-467f-a67b-3474feb3a85e"]
+Cell[10316, 293, 4335, 113, 401, "Input",ExpressionUUID->"69103bc4-05ea-4e05-bf23-62a20dd5917b"],
+Cell[14654, 408, 323, 7, 40, "Output",ExpressionUUID->"c28e5a91-bda4-467f-a67b-3474feb3a85e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14613, 408, 2287, 59, 292, "Input",ExpressionUUID->"ee362e04-6799-45dc-a076-7142424ab5ba"],
-Cell[16903, 469, 260, 5, 39, "Output",ExpressionUUID->"cbe1e111-f8d4-459c-8318-c2e045c95072"]
+Cell[15014, 420, 2287, 59, 209, "Input",ExpressionUUID->"ee362e04-6799-45dc-a076-7142424ab5ba"],
+Cell[17304, 481, 260, 5, 40, "Output",ExpressionUUID->"cbe1e111-f8d4-459c-8318-c2e045c95072"]
+}, Open  ]]
 }, Open  ]]
 }
 ]

@@ -60,6 +60,29 @@ combineRSimp[x_, y_, s1_, s2_, rule_] := Simplify[Simplify[combineR[x, y, s1, s2
 
 
 (* ::Input::Initialization:: *)
+shortcuts = {
+A[(y_-x_)/(z_-y_)|(x_-y_)/(y_-z_)]-> a[x, y, z],  A[y_/(z_-y_)]-> a[t0, y, z], A[(z_-y_)/y_|-1+z_/y_]-> 1-a[t0, y, z],
+A[((x_-y_) (z_-t_))/((y_-z_) (x_-t_))]-> b[x,y,z,t],
+A[((-x_+y_) (-t_+z_) )/((-t_+x_)(-y_+z_))]-> 1-b[t,x, y,z], A[(x_(-y_+z_) )/((-x_+y_) z_)|(x_(y_-z_) )/((x_-y_) z_)]-> b[t0,x, y,z],
+
+A[(-y_+z_)/(x_+y_)]-> 1-a'[x, y, z], A[(x_+y_)/(-y_+z_)]-> a'[x, y, z],
+A[x_^2/(y_ z_+x_ (y_+z_))|x_^2/(x_ z_+y_ (x_+z_))]-> c[x, y, z],
+ A[(y_ z_+x_ (y_+z_))/((x_+z_) (-y_+t_))|-((y_ z_+x_ (y_+z_))/((x_+z_) (y_-t_)))|(x_ z_+y_ (x_+z_))/((x_+z_) (-y_+t_))|-((x_ z_+y_ (x_+z_))/((x_+z_) (y_-t_)))]-> d[x,z,y,t],
+A[((x_+z_) (-y_+t_))/(y_ z_+x_ (y_+z_))|-(((x_+z_) (y_-t_))/(y_ z_+x_ (y_+z_)))|((x_+z_) (-y_+t_))/(x_ z_+y_ (x_+z_))|-(((x_+z_) (y_-t_))/(x_ z_+y_ (x_+z_)))]-> 1-d[x,z,y,t],
+ A[((y_-z_) (x_+t_))/((x_-y_) (z_+t_))|((z_-y_) (x_+t_))/((y_-x_) (z_+t_))]-> e[t, z,x, y],
+A[((x_-z_) (y_-t_))/((x_+y_) (z_+t_))]-> f[t,z,y,x],
+A[((x_+y_) (z_+t_))/((x_-z_) (y_-t_))]-> 1-f[t,z,y,x],
+A[(x_^2 (-y_+z_))/((x_+z_) (y_ t_+x_ (y_+t_)))|(x_^2 (-y_+z_))/((x_+z_) (x_ t_+y_ (x_+t_)))|(x_^2 (-y_+z_))/((x_+z_) (x_ y_+t_ (x_+y_)))]-> g[x,z,y,t],
+A[((x_+z_) (y_ t_+x_ (y_+t_)))/(x_^2 (-y_+z_))|((x_+z_) (x_ t_+y_ (x_+t_)))/(x_^2 (-y_+z_))|((x_+z_) (x_ y_+t_ (x_+y_)))/(x_^2 (-y_+z_))]->1- g[x,z,y,t],
+A[(x_^2 y_^2)/((x_+y_) (x_ z_ t_+y_ z_ t_+x_ y_ (z_+t_)))|(x_^2 y_^2)/((x_+y_) (x_ y_ t_+y_ z_ t_+x_ z_ (y_+t_)))|(x_^2 y_^2)/((x_+y_) (x_ y_ z_+x_ y_ t_+z_ t_ (x_+y_)))]-> h[x,y, z, t],
+A[z_(1/x_+1/y_)]-> 1-n[x, y, z],
+A[(x_ (-y_+z_))/(y_ (x_+z_))]-> m[x,  y, z], A[(y_ (x_+z_))/(x_(z_-y_))|-((y_ (x_+z_))/(x_(y_-z_)))]-> 1-m[x,y,z]
+
+};
+times2numbers = {t0-> 0, t1-> 1, t2-> 2, t3-> 3, t4-> 4} ;
+
+
+(* ::Input::Initialization:: *)
 Clear[integrate];
 
 integrate[a_+b_, z_] := integrate[a, z] + integrate[b, z];
