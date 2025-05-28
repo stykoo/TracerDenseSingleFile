@@ -1,6 +1,6 @@
 # TracerDenseSingleFile
 
-This repository provides the Mathematica notebooks for computing the cumulants of a tracer in the dense SEP. The associated paper is: Poncet, Grabsch & Bénichou, "Full stochastic process of a tracer in a dense single-file system" (2025). The arXiv link will be provided later.
+This repository provides the Mathematica notebooks for computing the cumulants of a tracer in the dense SEP. See the associated paper: Poncet, Grabsch & Bénichou, "Full stochastic dynamics of a tracer in a dense single-file system" (2025) [arXiv:2505.21446](https://arxiv.org/abs/2505.21446).
 
 ## List of files
 - `defs_and_integrals.nb`: Provides the basic definitions and the integrals necessary for the other notebooks. Upon saving, Mathematica automatically generates the package `defs_and_integrals.m` that can later be loaded in another notebook.
